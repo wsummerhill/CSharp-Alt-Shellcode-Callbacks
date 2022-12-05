@@ -1,3 +1,39 @@
 # CSharp Alternative Shellcode Callbacks
 
-test
+## Alternative shellcode execution techniques using Windows callback functions
+
+Each CSharp file contains code to execute shellcode using native Windows callbacks. I tried to use much less common callback techniques that weren't typically documented online as far as I could tell. This way they are should be more evasive.<br />
+_NOTE: The shellcode samples used in every C# file are to execute Windows 64-bin Calculator.exe <br />
+NOTE 2: I've also included the C/C++ code samples from VX-Underground which these were based off of_<br />
+
+The C# malware samples contain the following execution flows:
+- Base64 decode 64-bit shellcode
+- XOR decrypt shellcode
+- Allocate memory with VirtualAlloc()
+- Copy shellcode to memory with Marshal.Copy()
+- Execute shellcode with callback function
+<br />
+
+For each code sample, any decrypting/decoding routines could be changed to fit your needs.<br />
+It's also possible to replace the Marshal.Copy() functions with alternatives such as:
+- RtlMoveMemory()
+- WriteProcessMemory()
+<br />
+
+Compiling intructions with **csc.exe**:
+```
+// Compile EXE
+csc.exe /target:exe /out:TestExecutable.exe CSharp-Callback_[FILENAME].cs
+
+// Compile DLL
+csc.exe /target:library /out:TestLibrary.dll CSharp-Callback_[FILENAME].cs
+```
+<br />
+Enjoy the C# samples and good luck! Please povide any feedback if you'd like additional callback functions to be implemented.
+<br />
+
+---------------------------
+
+## Reference
+
+Thanks to [DamonMohammadbagher/NativePayload_CBT](https://github.com/DamonMohammadbagher/NativePayload_CBT) for the inspiration and to [VX Underground](https://www.vx-underground.org) for the Windows malware templates in C.
