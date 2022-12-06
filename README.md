@@ -4,7 +4,7 @@
 
 Each CSharp file contains code to execute shellcode using native Windows callbacks. I tried to use much less common callback techniques that weren't typically documented online as far as I could tell. This way they _should_ be more evasive.<br /><br />
 
-_NOTE: The shellcode samples used in every C# file are to execute Windows 64-bin Calculator.exe <br />
+_NOTE: The shellcode samples used in every C# file will execute Windows 64-bin Calculator.exe <br />
 NOTE 2: I've also included the C/C++ code samples from VX-Underground which these were based off of_<br />
 
 **The C# malware samples contain the following execution flows:**
@@ -16,9 +16,10 @@ NOTE 2: I've also included the C/C++ code samples from VX-Underground which thes
 <br />
 For each code sample, any decrypting/decoding routines could be changed to fit your needs.<br />
 
-It's also possible to replace the Marshal.Copy() functions with alternatives such as:
-- RtlMoveMemory()
-- WriteProcessMemory()
+It's also possible to replace the some functions in the code with alternatives such as:
+- Use RtlMoveMemory() instead of Marshal.Copy()
+- WriteProcessMemory() instead of Marshal.Copy()
+- Use the managed function Marshal.AllocHGlobal() to allocate space instead of VirtualAlloc()
 <br />
 
 **Compiling intructions with csc.exe**:
