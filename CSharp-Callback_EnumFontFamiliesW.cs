@@ -1,6 +1,5 @@
 using System;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace AltCallbacks
 {
@@ -17,6 +16,7 @@ namespace AltCallbacks
 
         [DllImport("user32.dll")]
         static extern IntPtr GetDCEx(IntPtr hWnd, IntPtr hRgnClip, uint flags);
+        
         [DllImport("user32.dll")]
         static extern bool ReleaseDC(IntPtr hWnd, IntPtr hDC);
 
