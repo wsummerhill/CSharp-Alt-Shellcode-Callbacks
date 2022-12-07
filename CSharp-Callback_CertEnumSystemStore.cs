@@ -1,6 +1,5 @@
 using System;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace AltCallbacks
 {
@@ -8,7 +7,6 @@ namespace AltCallbacks
     {
         const uint MEM_COMMIT = 0x00001000;
         const uint PAGE_EXECUTE_READWRITE = 0x40;
-
 
         [DllImport("kernelbase.dll")]
         public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, UInt32 flAllocationType, UInt32 flProtect);
