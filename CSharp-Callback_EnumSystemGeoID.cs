@@ -21,7 +21,6 @@ namespace AltCallbacks
         [DllImport("Kernel32.dll")]
         public static extern IntPtr EnumSystemGeoID(GEOCLASS GeoClass, uint ParentGeoId, IntPtr lpGeoEnumProc);
 
-        
         static string key = "THISISMYKEY";
 
         static void Main(string[] args)
