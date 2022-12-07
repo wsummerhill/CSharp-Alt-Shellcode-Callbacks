@@ -28,11 +28,6 @@ namespace AltCallbacks
             public int y;
         }
 
-
-        [DllImport("kernel32.dll")]
-        private static extern IntPtr CreateFileW([MarshalAs(UnmanagedType.LPWStr)]string lpFileName, uint dwDesiredAccess, uint dwShareMode,
-        IntPtr lpSecurityAttributes, uint dwCreationDisposition, uint dwFlagsAndAttributes, IntPtr hTemplateFile);
-
         [DllImport("kernelbase.dll")]
         public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, UInt32 flAllocationType, UInt32 flProtect);
 
