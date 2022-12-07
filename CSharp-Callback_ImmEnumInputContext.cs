@@ -16,7 +16,6 @@ namespace AltCallbacks
 
         static string key = "THISISMYKEY";
 
-
         static void Main(string[] args)
         {
             // Calc shellcode
