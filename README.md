@@ -14,7 +14,7 @@ NOTE 2: I've also included the C/C++ code samples from VX-Underground which some
 - Copy shellcode to memory with Marshal.Copy()
 - Execute shellcode with callback function
 <br />
-For each code sample, any decrypting/decoding routines could be changed to fit your needs.<br />
+For each code sample, any decrypting/decoding routines could be changed to fit your needs. Also, use D/Invoke, obfuscation, junk code, etc!<br /><br />
 
 It's also possible to replace the some functions in the code with alternatives such as:
 - Use RtlMoveMemory() instead of Marshal.Copy()
@@ -33,6 +33,8 @@ csc.exe /target:library /out:TestLibrary.dll CSharp-Callback_[FILENAME].cs
 <br />
 Enjoy the CSharp samples and good luck! Please povide any feedback if you'd like additional callback functions to be implemented.
 <br />
+
+Blog post: [https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html](https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html)
 
 ---------------------------
 
