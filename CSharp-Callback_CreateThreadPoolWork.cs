@@ -13,16 +13,16 @@ namespace AltCallbacks
         public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, UInt32 flAllocationType, UInt32 flProtect);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern IntPtr CreateThreadpoolWork(IntPtr pWorkCallback, IntPtr pContext, IntPtr pPool);
+        public static extern IntPtr CreateThreadpoolWork(IntPtr pfnwk, IntPtr pv, IntPtr pcbe);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern void SubmitThreadpoolWork(IntPtr pWork);
+        public static extern void SubmitThreadpoolWork(IntPtr pwk);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern void WaitForThreadpoolWorkCallbacks(IntPtr ptpWork, bool cancelPendingCallbacks);
+        public static extern void WaitForThreadpoolWorkCallbacks(IntPtr pwk, bool fCancelPendingCallbacks);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern void CloseThreadpoolWork(IntPtr pWork);
+        public static extern void CloseThreadpoolWork(IntPtr pwk);
 
         static string key = "THISISMYKEY";
 
