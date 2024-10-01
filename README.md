@@ -3,7 +3,6 @@
 ## Alternative shellcode execution techniques using Windows callback functions
 
 Each CSharp file contains code to execute shellcode using native Windows callbacks. I tried to use much less common callback techniques that weren't typically documented online as far as I could tell. This way they _should_ be more evasive.<br /><br />
-
 _NOTE: The shellcode samples used in every C# file will execute Windows 64-bit Calculator.exe <br />
 NOTE 2: I've also included the C/C++ code samples from VX-Underground which some of these were based off of_<br />
 
@@ -13,14 +12,13 @@ NOTE 2: I've also included the C/C++ code samples from VX-Underground which some
 - Allocate memory with VirtualAlloc()
 - Copy shellcode to memory with Marshal.Copy()
 - Execute shellcode with callback function
-<br />
-For each code sample, any decrypting/decoding routines could be changed to fit your needs. Also, use D/Invoke, obfuscation, junk code, etc!<br /><br />
+
+For each code sample, any decrypting/decoding routines could be changed to fit your needs. Also, use D/Invoke, obfuscation, junk code, etc!<br />
 
 It's also possible to replace the some functions in the code with alternatives such as:
 - Use RtlMoveMemory() instead of Marshal.Copy()
 - WriteProcessMemory() instead of Marshal.Copy()
 - Use the managed function Marshal.AllocHGlobal() to allocate space instead of VirtualAlloc()
-<br />
 
 **Compiling intructions with csc.exe**:
 ```
@@ -30,11 +28,10 @@ csc.exe /target:exe /out:TestExecutable.exe CSharp-Callback_[FILENAME].cs
 // Compile DLL
 csc.exe /target:library /out:TestLibrary.dll CSharp-Callback_[FILENAME].cs
 ```
-<br />
-Enjoy the CSharp samples and good luck! Please povide any feedback if you'd like additional callback functions to be implemented.
-<br />
 
-Blog post: [https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html](https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html)
+Enjoy the CSharp samples and good luck! Please povide any feedback if you'd like additional callback functions to be implemented.
+
+Associated log post: [https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html](https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html)
 
 ---------------------------
 
