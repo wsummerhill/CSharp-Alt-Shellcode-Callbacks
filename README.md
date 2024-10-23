@@ -31,7 +31,7 @@ csc.exe /target:library /out:TestLibrary.dll CSharp-Callback_[FILENAME].cs
 
 Enjoy the CSharp samples and good luck! Please povide any feedback if you'd like additional callback functions to be implemented.
 
-Associated log post: [https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html](https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html)
+Associated blog post: [https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html](https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html)
 
 ---------------------------
 
