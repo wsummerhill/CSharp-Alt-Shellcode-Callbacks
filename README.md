@@ -20,6 +20,8 @@ It's also possible to replace the some functions in the code with alternatives s
 - WriteProcessMemory() instead of Marshal.Copy()
 - Use the managed function Marshal.AllocHGlobal() to allocate space instead of VirtualAlloc()
 
+For reducing entropy of payloads, use my [DictionShellcode](https://github.com/wsummerhill/DictionShellcode) tool or a similar technique to obfuscate shellcode without encryption/decryption.
+
 **Compiling intructions with csc.exe**:
 ```
 // Compile EXE
