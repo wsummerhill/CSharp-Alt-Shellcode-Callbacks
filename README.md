@@ -33,9 +33,11 @@ csc.exe /target:library /out:TestLibrary.dll CSharp-Callback_[FILENAME].cs
 
 Enjoy the CSharp samples and good luck! Please povide any feedback if you'd like additional callback functions to be implemented.
 
+## Resources
+
 Associated blog post: [https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html](https://wsummerhill.github.io/malware/2022/12/09/CSharp-Alt-Shellcode-Callbacks.html)
 
----------------------------
+SecTor 2024 conference presentation slides: **[Simplified Malware Evasion - Entropy and Other Techniques](https://i.blackhat.com/SecTor-2024/Sector-24-Summerhill-SimplifiedMalwareEvasion.pdf)**
 
 ## Reference
 
